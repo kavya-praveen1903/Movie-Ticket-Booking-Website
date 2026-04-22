@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+.container-main {
+  @apply min-h-screen bg-gradient-to-b from-gray-900 to-black;
+}
+
+.movie-card {
+  @apply relative overflow-hidden rounded-lg cursor-pointer group transition-transform hover:scale-105 duration-300;
+}
+
+.movie-poster {
+  @apply w-full h-full object-cover group-hover:brightness-75 transition-all duration-300;
+}
+
+.seat {
+  @apply w-8 h-8 rounded-t-lg border-2 cursor-pointer transition-all duration-200;
+}
+
+.seat.available {
+  @apply border-gray-400 bg-gray-600 hover:bg-gray-500;
+}
+
+.seat.booked {
+  @apply border-red-600 bg-red-600 cursor-not-allowed opacity-50;
+}
+
+.seat.selected {
+  @apply border-green-500 bg-green-600;
+}

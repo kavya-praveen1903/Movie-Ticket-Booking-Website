@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+}
+
+.container-main {
+  @apply min-h-screen bg-[radial-gradient(circle_at_top,_rgba(127,29,29,0.3),_transparent_24%),linear-gradient(180deg,_#111827,_#020617_58%,_#000000)];
+}
+
+.movie-card {
+  @apply relative overflow-hidden rounded-[1.75rem] cursor-pointer border border-white/10 transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(0,0,0,0.45)];
+}
+
+.movie-poster {
+  @apply w-full h-full object-cover transition-all duration-300;
+}
+
+.seat {
+  @apply inline-flex h-11 w-11 items-center justify-center rounded-2xl border text-[11px] font-bold tracking-wide transition duration-200;
+}
+
+.seat.available {
+  @apply border-slate-500/70 bg-slate-700/80 text-white hover:-translate-y-1 hover:border-slate-300 hover:bg-slate-600;
+}
+
+.seat.booked {
+  @apply cursor-not-allowed border-[#b20710]/40 bg-[#641018]/80 text-red-100 opacity-60;
+}
+
+.seat.selected {
+  @apply border-emerald-300 bg-emerald-500 text-slate-950 shadow-[0_0_30px_rgba(16,185,129,0.4)];
+}
+
+.cinema-screen {
+  @apply flex h-16 items-center justify-center rounded-[999px] border border-white/10 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.9),_rgba(248,250,252,0.45)_35%,_rgba(148,163,184,0.08)_72%,_transparent_100%)] text-sm font-semibold uppercase tracking-[0.6em] text-slate-900;
+}
+
+.seat-row {
+  @apply flex items-center justify-center gap-2 sm:gap-4;
+}
+
+.seat-row-label {
+  @apply w-8 text-center text-sm font-bold uppercase tracking-[0.25em] text-gray-400;
+}
+
+.seat-grid {
+  @apply flex items-center justify-center gap-2;
+}
+
+.seat-cluster {
+  @apply grid grid-cols-5 gap-2;
+}
+
+.seat-aisle {
+  @apply w-4 shrink-0 sm:w-8;
+}
+
+.legend-chip {
+  @apply flex items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3;
+}
+
+@media (max-width: 640px) {
+  .seat {
+    @apply h-8 w-8 rounded-xl px-0 text-[9px];
+  }
+
+  .seat-row {
+    @apply gap-1;
+  }
+
+  .seat-row-label {
+    @apply w-5 text-[10px];
+  }
+
+  .seat-cluster {
+    @apply gap-1;
+  }
+
+  .seat-aisle {
+    @apply w-2;
+  }
+}
