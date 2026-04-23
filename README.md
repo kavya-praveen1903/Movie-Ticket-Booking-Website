@@ -1,16 +1,84 @@
-# MovieFlix DBMS Project
+🎬 MovieFlix – Movie Ticket Booking System
+==========================================
 
-A movie ticket booking project built with React, Vite, Tailwind CSS, Node.js, Express, and MySQL.
+A full-stack movie ticket booking platform that allows users to browse movies, view showtimes, select seats, and book tickets seamlessly. The system is designed to simulate a real-world cinema booking experience with dynamic seat management and user authentication.
 
-## Structure
+📌 Overview
+-----------
 
-```text
-DBMS FINAL PROJECT/
-  client/   React frontend
-  server/   Express + MySQL backend
-```
+MovieFlix is a DBMS-based web application that demonstrates how database design integrates with a modern full-stack system. It focuses on efficient data handling, real-time seat availability, and smooth user interaction.
 
-## Run The Project
+The project follows a structured client-server architecture:
+
+*   **Frontend** handles UI/UX and user interactions
+    
+*   **Backend** manages API logic and business rules
+    
+*   **Database** ensures data consistency and relationships
+    
+
+✨ Key Features
+--------------
+
+*   🎞️ Browse movies by genre
+    
+*   📄 View detailed movie information and showtimes
+    
+*   🏢 Display theater name, location, and screen number
+    
+*   💺 Interactive seat selection with visual layout
+    
+*   🔐 User authentication (Register/Login)
+    
+*   🎟️ Ticket booking system
+    
+*   📜 Booking history tracking
+
+
+🛠️ Tech Stack
+--------------
+
+### Frontend
+
+*   React (Vite)
+    
+*   Tailwind CSS
+    
+
+### Backend
+
+*   Node.js
+    
+*   Express.js
+    
+
+### Database
+
+*   MySQL
+
+
+🧠 Concepts Demonstrated
+------------------------
+
+*   Relational database design
+    
+*   Data normalization and schema structuring
+    
+*   CRUD operations using MySQL
+    
+*   REST API development
+    
+*   Client-server architecture
+    
+*   State management in frontend
+    
+*   Seat allocation logic
+    
+*   Authentication and session handling
+    
+
+🚀 How to Run the Project
+-------------------------
 
 ### 1. Database setup
 
@@ -45,18 +113,10 @@ npm run dev
 
 The frontend runs on `http://localhost:3000`.
 
-## Main Features
+🔌 API Endpoints
+----------------
 
-- Browse movies by genre
-- View movie details and showtimes
-- See theater name/location and screen number
-- Select seats with a visual seat layout
-- Register and log in
-- Book tickets and view booking history
-
-## API Routes
-
-### Auth
+### Authentication
 
 - `POST /api/auth/register`
 - `POST /api/auth/login`
@@ -73,15 +133,19 @@ The frontend runs on `http://localhost:3000`.
 - `POST /api/bookings`
 - `GET /api/bookings`
 
-## Important Files
+📂 Important Files
+------------------
 
 - [server/schema.sql](/c:/Users/KIIT0001/DBMS%20FINAL%20PROJECT/server/schema.sql)
 - [server/clean_and_populate.sql](/c:/Users/KIIT0001/DBMS%20FINAL%20PROJECT/server/clean_and_populate.sql)
 - [server/add_showtimes_seats.sql](/c:/Users/KIIT0001/DBMS%20FINAL%20PROJECT/server/add_showtimes_seats.sql)
 - [server/fix_posters.sql](/c:/Users/KIIT0001/DBMS%20FINAL%20PROJECT/server/fix_posters.sql)
 
-## Notes
+⚠️ Notes & Troubleshooting
+--------------------------
 
-- If booking pages show no seats, restart the backend and open the show again. Missing seat rows are auto-created now.
-- If showtime cards do not update, restart the backend because theater/showtime formatting is server-driven.
-- If posters do not update, hard refresh the browser with `Ctrl + F5`.
+*   If seats are not visible → restart backend and reopen the show
+    
+*   If showtime data is not updating → restart backend
+    
+*   If posters don’t load → hard refresh (Ctrl + F5)
